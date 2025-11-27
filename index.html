@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+    <header>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#education">Education</a> 
+        <a href="#services">Skills</a>
+        <a href="#projects">Projects</a>  
+        <a href="#certifications">Certifications</a> 
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Home section -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, I am Dhanya</h3>
+        <h1><span class="multiple-text"></span></h1>
+        <p>
+          I'm a computer engineering student at Malnad College Of Engineering.
+        </p>
+
+     <a href="Documents/DhanyaShreeCV(1).pdf" class="btn" target="_blank" download="DhanyaShreeCV">
+  Download CV
+</a>
+          <div class="circle"></div>
+        </div>
+        <img src="images/myphoto.jpg" alt="My Profile Photo" class="profile-photo">
+        <div class="overlay"></div>
+      </div>
+
+      <div class="home-img">
+        <img src="images/home.png" alt="" />
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="education" id="education">
+      <h2 class="heading">My <span>Education</span></h2>
+
+      <div class="edu-container">
+        <div class="edu-box">
+          <h3>Malnad College Of Engineering</h3>
+          <p>B.E in Computer Engineering (2023-Present)</p>
+        </div>
+
+        <div class="edu-box">
+          <h3>Masters PU College</h3>
+          <p>Completed my Pre University(2021-2023)</p>
+        </div>
+      </div>
+
+      <div class="edu-container">
+        <div class="edu-box">
+          <h3>C.K.S English School </h3>
+          <p>Completed my Scooling(2012-2021)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="services" id="services">
+      <h2 class="heading">My <span>Skills</span></h2>
+
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bxl-css3"></i>
+          <h3>Web Development</h3>
+          <p>
+            HTML, CSS, JavaScript
+          </p>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bxs-data"></i>
+          <h3>Databases</h3>
+          <p>
+            
+          </p>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bxl-visual-studio"></i>
+          <h3>Backend</h3>
+          <p>
+            Python, Java, C, PHP.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects" id="projects">
+      <h2 class="heading">My <span>Projects</span></h2>
+
+      <div class="projects-container">
+        <div class="project-box">
+          <h3>Personal Portfolio Website</h3>
+          <p>HTML, CSS, JS - Fully responsive personal website.</p>
+        </div>
+
+        <div class="project-box">
+          <h3>AI Based Timetable Generator</h3>
+          <p>HTML, CSS, JS, CP-SAT Solver, Genetic Algorithm</p>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="certifications" id="certifications">
+      <h2 class="heading">My <span>Certifications</span></h2>
+
+      <div class="cert-container">
+        <div class="cert-box">
+          <h3>Data Warehouse Concepts Certification</h3>
+        </div>
+
+        <div class="cert-box">
+          <h3>Python Essentials Certification</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me!</span></h2>
+
+      <form action="https://formspree.io/f/mqkogzbg" method="POST">
+        <div class="input-box">
+          <input type="text" name="Name" placeholder="Full Name (optional)" />
+          <input type="email" name="Email" placeholder="Email Address*" required />
+        </div>
+
+        <div class="input-box">
+          <input type="number" name="Phone" placeholder="Phone Number (optional)" />
+          <input type="text" name="Subject" placeholder="Email Subject*" required />
+        </div>
+
+        <textarea name="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn" />
+      </form>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright ©️ 2025 by TelleInc. | All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bxs-up-arrow-circle"></i></a>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
