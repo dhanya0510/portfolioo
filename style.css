@@ -1,0 +1,364 @@
+/* ------------------------------ */
+/* GOOGLE FONT */
+/* ------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #0a1a3a;
+  --second-bg: #112255;
+  --text-color: #ffffff;
+  --main-color: hsl(208, 69%, 82%);
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ------------------------------ */
+/* HEADER / NAVBAR */
+/* ------------------------------ */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 20, 50, 0.4);
+  z-index: 1000;
+}
+
+.navbar a {
+  font-size: 1.1rem;
+  margin-left: 2rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+  transform: scale(1.1);
+}
+
+/* ------------------------------ */
+/* SECTIONS GENERAL */
+/* ------------------------------ */
+section {
+  padding: 100px 10%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.heading span {
+  color: var(--main-color);
+}
+
+/* ------------------------------ */
+/* HOME SECTION */
+/* ------------------------------ */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  position: relative; 
+  overflow: hidden;
+  padding-top: 120px;
+}
+/* ROTATING TEXT */
+.profession-container {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+
+.profession-box {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  animation: rotateText 10s linear infinite;
+}
+
+
+.profession {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  transform: rotate(calc(90deg * var(--i)));
+}
+
+
+
+/* TRIANGLE RIGHT SIDE DESIGN */
+.home::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
+  background: var(--main-color);
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: -1;
+}
+
+
+.home-content h3 {
+  font-size: 2rem;
+}
+
+.home-content h1 {
+  font-size: 3.5rem;
+  color: var(--main-color);
+}
+
+.home-content p {
+  max-width: 500px;
+  margin: 10px 0 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: var(--main-color);
+  color: #000;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+.home-img img {
+  width: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px var(--main-color);
+  animation: floatImg 3s ease-in-out infinite;
+}
+.profile-photo {
+  width: 350px;             
+  height: 350px;            
+  object-fit: cover;        
+  border-radius: 50%;       
+  border: 5px solid #001f5b;  
+  box-shadow: 0 0 30px var(--main-color); 
+  position: absolute;       
+  top: 50%;                 
+  right: 10%;                
+  transform: translateY(-50%); 
+  transition: 0.3s;
+}
+
+.profile-photo:hover {
+  transform: translateY(-50%) scale(1.05); 
+}
+
+@keyframes floatImg {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+
+.profession-container {
+  position: absolute;
+  right: 5%;
+  bottom: 15%;
+}
+
+.profession-box {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: flex;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.profession {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(calc(90deg * var(--i)));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profession i {
+  font-size: 2.5rem;
+  color: var(--main-color);
+}
+
+
+/* EDUCATION SECTION */
+
+.edu-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.edu-box {
+  background: var(--second-bg);
+  padding: 20px;
+  width: 320px;
+  border-radius: 10px;
+  transition: 0.3s;
+  border-left: 5px solid var(--main-color);
+}
+
+.edu-box:hover {
+  transform: translateY(-10px);
+  background: #1a3880;
+}
+
+/* SKILLS SECTION */
+.services-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services-box {
+  width: 300px;
+  padding: 25px;
+  border-radius: 12px;
+  background: var(--second-bg);
+  border-bottom: 5px solid var(--main-color);
+  text-align: center;
+  transition: 0.4s;
+}
+
+.services-box i {
+  font-size: 3.5rem;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+.services-box:hover {
+  transform: translateY(-10px);
+  background: #1a3880;
+}
+
+/* PROJECTS */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-box {
+  width: 320px;
+  background: var(--second-bg);
+  padding: 20px;
+  border-radius: 10px;
+  border-top: 4px solid var(--main-color);
+  transition: 0.3s;
+}
+
+.project-box:hover {
+  background: #1a3880;
+  transform: scale(1.05);
+}
+
+
+/* CERTIFICATIONS */
+.cert-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cert-box {
+  padding: 20px;
+  background: var(--second-bg);
+  width: 280px;
+  border-radius: 10px;
+  transition: 0.3s;
+  border-left: 5px solid var(--main-color);
+}
+
+.cert-box:hover {
+  transform: translateY(-10px);
+  background: #1a3880;
+}
+
+/* CONTACT */
+
+.contact form {
+  max-width: 700px;
+  margin: auto;
+  background: var(--second-bg);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.input-box input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+  background: #0d1c45;
+  color: var(--text-color);
+}
+
+textarea {
+  height: 150px;
+}
+
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #06122b;
+}
+
+.footer-iconTop i {
+  font-size: 2.5rem;
+  color: var(--main-color);
+}
